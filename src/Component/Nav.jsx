@@ -44,9 +44,9 @@ const Nav = () => {
             <div className='mx-auto px-4 sm:px-10 lg:px-20 py-4'>
                 <div className='flex justify-between'>
                     <div className='flex items-center'>
-                        <a href="#">
-                            <img src="./logo.png" alt="Logo" className='h-20 w-20' />
-                        </a>
+                        
+                            <img src="./newlogo.png" alt="Logo" className='h-10 w-16' />
+                        
                     </div>
                     <div className='hidden md:flex font-Opens items-center gap-6'>
                         {data.map((item, index) => (

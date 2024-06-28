@@ -6,22 +6,22 @@ const About = () => {
         {
             url: '../../about/labour.png',
             item: 'About Us',
-            para: 'JR Holland is one of the top fresh produce and food supplier companies in the North East of England. Our produce is always of excellent quality and with our quick turnaround and excellent customer service'
+            para: 'Tribeca Wholesale is an expert fresh produce and food supplier across the EU. Our produce is always of excellent quality and with quick turnaround and excellent customer service.'
         },
         {
             url: '../../about/computer.png',
-            item: 'Online Ordering',
-            para: 'Discover the convenience of ordering online with our bespoke ordering system.  Online ordering offers unparalleled convenience for our customers. You can browse our full selection of products, or place an order at any time and from anywhere.'
+            item: 'Network Coverage: ',
+            para: 'Tribeca Wholesale offers fresh produce and food supplier across the EU and beyond. Our vast network and supply chain means we have clients in major economies such as Germany, Poland, France, Ireland and growing by the week.'
         },
         {
             url: '../../about/fruit.png',
             item: 'Our Produce',
-            para: 'Established in 1983, J.R. Holland are the oldest established importers and  distributors of chilled fresh produce in the North East of England.Our passion for providing the very best produce remains as strong as ever.'
+            para: 'Established in 2012, Tribeca Wholesale are established importers and distributors of chilled fresh produce in the EU. Our passion for providing the very best produce remains as strong as ever.'
         },
         {
             url: '../../about/supply.png',
             item: 'Our Suppliers',
-            para: 'We work very closely with our suppliers across the North of England. Businesses that grow responsibly and supply reliably. They understand the nature of the shared promise we all make to our customers about the quality of the produce we supply'
+            para: 'We work very closely with our suppliers across South America, Africa and the EU. These carefully selected businesses grow responsibly and supply reliably. They understand the nature of the shared promise we all make to our customers about the quality of the produce we supply.'
         },
     ];
 

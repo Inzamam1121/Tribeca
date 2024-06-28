@@ -8,8 +8,8 @@ const Text = () => {
                 <h1 className='text-[#a87b3f] font-encode text-2xl'>MORE THAN JUST FRUIT AND VEG</h1>
             </div>
             <div className='w-full px-5 lg:w-[50%] flex flex-col justify-center items-center gap-6 text-center font-Opens text-lg text-[#545454]'>
-                <p >JR Holland Food Services are the North East’s leading food service provider to all sectors of the catering industry. We are a Wholesale Food supplier providing fresh produce delivered via our chilled distribution network.</p>
-                <p>Founded in 1983 JR Holland Food Services supplies some of the biggest names in catering in the North of England with fresh produce six days a week from our distribution depot on the Team Valley, Gateshead.</p>
+                <p>Tribeca Wholesale are a leading food service provider to all sectors of the catering industry within Czech Republic and the EU. We are a Wholesale Fruit and Veg supplier providing fresh produce delivered via our chilled distribution network.</p>
+                <p>Founded in 2012 JR Tribeca Wholesale supplies some of the biggest names in catering across the EU with fresh produce six days a week from our distribution depot in Brno.</p>
             </div>
         </div>
     )
