@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { TiSocialFacebook } from "react-icons/ti";
 import { CiInstagram } from "react-icons/ci";
 import { TiSocialTwitter } from "react-icons/ti";
 import { GrLinkedinOption } from "react-icons/gr";
+import AlertContext from '../Alert/AlertContext';
 
 const Footer = () => {
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+    const alertcontext = useContext(AlertContext);
+    const {showAlert} =  alertcontext
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const response = await fetch('http://localhost:5000/sendMail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, subject, message }),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            showAlert('Email sent successfully','success');
+            setEmail('');
+            setSubject('');
+            setMessage('');
+        } else {
+            showAlert('Failed to send email','danger');
+        }
+    };
+
     const companyInfo = [
         {
             name: 'Tribeca Wholesale Limited',
@@ -13,10 +43,9 @@ const Footer = () => {
             county: 'Tyne & Wear',
             postcode: 'NE11 0PZ',
             country: 'United Kingdom',
-            phone:'+4 07654321',
-            mail:'contact@tribecaws.com'
+            phone: '+4 07654321',
+            mail: 'contact@tribecaws.com'
         },
-       
     ];
 
     const quickLinks = ['Produce', 'Delivery', 'About us', 'Gallery'];
@@ -46,13 +75,15 @@ const Footer = () => {
                 </div>
                 <div className='py-4'>
                     <h3 className="font-Opens font-light mb-4">Contact Us</h3>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="mb-4">
                             <label htmlFor="email" className="block text-[#818181] mb-2">Email</label>
                             <input
                                 type="email"
                                 id="email"
                                 className="w-full p-2 border border-gray-300 rounded bg-gray-900"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
                         </div>
@@ -62,6 +93,8 @@ const Footer = () => {
                                 type="text"
                                 id="subject"
                                 className="w-full p-2 border border-gray-300 rounded bg-gray-900"
+                                value={subject}
+                                onChange={(e) => setSubject(e.target.value)}
                                 required
                             />
                         </div>
@@ -71,6 +104,8 @@ const Footer = () => {
                                 id="message"
                                 className="w-full p-2 border border-gray-300 rounded bg-gray-900"
                                 rows="4"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
                                 required
                             ></textarea>
                         </div>
@@ -92,7 +127,6 @@ const Footer = () => {
                         ))}
                     </ul>
                 </div>
-                
             </div>
             <div className='w-full flex lg:flex-row flex-col justify-between bg-[#000] bottom-0 px-4 py-3'>
                 <div className='font-Opens text-xs'>
