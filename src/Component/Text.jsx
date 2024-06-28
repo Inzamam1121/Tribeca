@@ -4,7 +4,7 @@ const Text = () => {
     return (
         <div className='flex flex-col items-center justify-center gap-11 py-10'>
             <div className='flex flex-col justify-center items-center gap-2 px-4'>
-                <h1 className='text-4xl font-encode font-semibold text-[#a28f64]'>JR HOLLAND FOOD SERVICES</h1>
+                <h1 className='text-4xl font-encode font-semibold text-[#a28f64]'>TRIBECA WHOLESALE</h1>
                 <h1 className='text-[#a87b3f] font-encode text-2xl'>MORE THAN JUST FRUIT AND VEG</h1>
             </div>
             <div className='w-full px-5 lg:w-[50%] flex flex-col justify-center items-center gap-6 text-center font-Opens text-lg text-[#545454]'>
